@@ -1,0 +1,47 @@
+import random
+
+list = ['Rock', 'Paper', 'Scissors']
+
+computer = list[random.randint(0,2)]
+#print(computer)
+
+player = False
+
+while player == False:
+  computer = list[random.randint(0,2)]
+  #print(computer)
+  print()
+  Player = input('Please choose... Rock, Paper, Scissors? or press q to quit')
+  
+  # Handling if Player chooses Rock
+  if Player.lower() != 'q':
+    if Player == computer:
+      print('Its a Tie.')
+    elif Player == 'Rock':
+      if computer == 'Paper':
+        print('You Lost as ', computer, ' was selected by computer')
+      else:
+        print('You won ', Player,' you beat the ', computer)
+  
+  # Handling if Player chooses Paper
+  
+    elif Player == 'Paper':
+      if computer == 'Rock':
+        print('You won ', Player,' you beat the ', computer)
+      else:
+        print('You Lost as ', computer, ' was selected by computer')
+
+# Handling if Player Chooses Scissors
+
+    elif Player == 'Scissors':
+      if computer == 'Rock':
+        print('You Lost as ', computer, ' was selected by computer')
+      else:
+        print('You won ', Player,' you beat the ', computer)
+    else:
+      print('Wrong Input!!!')
+  
+  else:
+    player = True
+    print('Thank you for playing!!!')
+  
